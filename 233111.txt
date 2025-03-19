@@ -1,0 +1,57 @@
+Дел 2:
+
+git fetch origin - после извршување на првиот дел, ги земам трите нови гранки од оддалеченото repo во локалното repo
+
+со git branch -r проверувам дали се земени новите гранки ( -r значи remote и покажува кон гранки кои се наоѓаат на оддалеченото repo
+
+git checkout -b 5-filter-tasks-by-category origin/5-filter-tasks-by-category - со оваа команда потенцирам системот да ја следи гранката 5-filter-tasks-by-category
+за да правам промени во кодот
+
+со nano SI2025Lab1Main.java ги внесувам соодветните промени во јава кодот од master гранката
+
+со git add. ги stage-ам фајловите што се наоѓаат во гранката, точката потенцира да се stage-не се што се наоѓа во гранката
+
+git commit -m "Implemented filterByCategory method" ги commit-ам промените во главниот фајл
+
+git push origin 5-filter-tasks-by-category ја пренесувам променетата гранка од локалниот repo до оддалечениот repo
+
+
+git checkout -b 7-count-tasks-per-category origin/7-count-tasks-per-category - со оваа команда потенцирам системот да ја следи гранката 7-count-tasks-per-category
+за да правам промени во кодот
+
+со nano SI2025Lab1Main.java ги внесувам соодветните промени во јава кодот од master гранката
+
+со git add. ги stage-ам фајловите што се наоѓаат во гранката
+
+git commit -m "Implemented countTasksPerCategory method" ги commit-ам промените во главниот фајл
+
+git push origin 7-count-tasks-per-category ја пренесувам променетата гранка од локалниот repo до оддалечениот repo
+
+
+git checkout -b 9-mark-category-completed origin/9-mark-category-completed - со оваа комадна му кажувам на локалното репо да ја следи гранката 9-mark-category-completed
+
+со nano SI2025Lab1Main.java ги внесувам соодветните промени во јава кодот од master гранката
+
+со git add. ги stage-ам фајловите што се наоѓаат во гранката
+
+git commit -m "Implemented markCategoryCompleted method" ги commit-ам промените во главниот фајл
+
+git push origin 9-mark-all-tasks-in-a-category-as-completed ја пренесувам променетата гранка од локалниот repo до оддалечениот repo
+
+git checkout master - се вратив на основната гранка
+
+git pull origin master - да се осигурам дека работам со последната верзија од основната гранка
+
+git checkout 7-count-tasks-per-category - го менувам следењето на гранката која остана од трите issues
+
+git pull origin 7-count-tasks-per-category - ја земам последната/најновата верзија од таа гранка
+
+git checkout master - се враќам на основната гранка
+
+git merge 7-count-tasks-per-category - ги спојувам двете гранки (основната и последната гранка од issues) локално во git
+
+Кога ги синхронизирав трите гранки со основната гранка немав конфликти и синхронизирањата се вршеа без проблем со помош на ORT стратегијата.
+Немаше конфликти бидејќи ORT проверува дали има разлики на исто место во кодот, но во овој случај промените што се правеа во SI2025Lab1Main.java беа во
+различни сегменти на кодот. На Git не му е гајле ако повеќе гранки го менуваат истиот фајл, git води рачун каде се случиле тие промени. Ако промените на 
+фајлот се наоѓаат на истиот ред, тогаш се појавува конфликт.
+

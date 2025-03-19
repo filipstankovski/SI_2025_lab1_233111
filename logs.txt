@@ -1,0 +1,16 @@
+*   47030fd Merge branch '7-count-tasks-per-category'
+|\  
+| * 651598b Implemented countTasksPerCategory method
+* |   c501d84 Merge pull request #10 from filipstankovski/5-filter-tasks-by-category
+|\ \  
+| * | 2a4c307 Implemented filterByCategory method
+| |/  
+* |   0a06f55 Merge pull request #11 from filipstankovski/9-mark-all-tasks-in-a-category-as-completed
+|\ \  
+| |/  
+|/|   
+| * f2e8576 Implemented markCategoryCompleted method
+|/  
+* d6b7984 Add starter code
+* 354ae84 initial commit
+* 9deab0f initial commit
